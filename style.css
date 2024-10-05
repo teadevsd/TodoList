@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    background: linear-gradient(135deg, rgb(54, 4, 4), rgb(153, 0, 0));        
+}
+
+.topnav {
+    display: fixed;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    /* border: 1px solid yellow; */
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.425);
+}
+
+.topnav img {
+    width: 32px;
+    display: none;
+}
+
+.topnav button {
+    margin: 0 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 12px 30px;
+    background: orangered;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.096);
+}
+
+#loginBtn {
+    background: #ffffff;
+    color: black;
+}
+
+.topnav button:hover {
+    background: rgb(161, 2, 2);
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    color: white;
+    gap: 60px;
+    cursor: pointer;
+}
+
+.navList :hover {
+    color:  rgb(180, 180, 180);
+}
+
+.topnav h2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    
+    
+}
+
+.todoApp {
+    width: 90%;
+    max-width: 540px;
+    background: white;
+    /* border: 1px solid wheat; */
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.459);
+}
+
+.todoApp h2 {
+    font-size: 30px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todoApp h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f1f1f1b2;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+#listContainer {
+    /* background: #f1f1f1b2; */
+    border-radius: 10px;
+    /* box-shadow: 0 0 5px rgba(128, 128, 128, 0.459); */
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    background: orangered;
+    padding: 16px 40px;
+    border-radius: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.row button:hover {
+    background: rgb(161, 5, 0);
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+}
+
+ul li:hover {
+    color: #535353;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #535353;
+}
+
+ul li.checked::before {
+    background-image: url(./images/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: grey;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+ul li span:hover {
+    background: rgb(190, 190, 190);
+    color: white;
+    border-radius: 50%;
+}
+
+.startDate, .endDate {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-color: lightgray;
+    color: black;
+    font-size: 14px;
+    cursor: default;
+    margin: 0 30px;
+    
+}
+
+.endDate {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-color: rgb(253, 123, 17);
+    color: black;
+    font-size: 14px;
+    cursor: default;
+    
+}
+
+.aboutContainer {
+    width: 90%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+article {
+    margin: 50px 0;
+    text-align: justify;
+}
+
+.faqs {
+    width: 90%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+}
+
+.faqs p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.faqs h3{
+    text-align: left;
+}
+
+.faqs h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#historyContainer {
+    width: 90%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+}
+    .dropdown {
+        display: flex;
+        align-items: center;
+        
+    }
+
+@media (max-width: 1024px) {
+    .navList, .btns {
+        display: none;
+    }
+    .topnav img {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    
+}
